@@ -1,0 +1,98 @@
+body {
+    height: 100vh;
+    margin: 0px;
+    background: linear-gradient(#8946a6, #5534a5);
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("stars1.png");
+    background-size: cover;
+    z-index: 3;
+}
+
+.content {
+    height: 100%;
+    margin: auto;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+a {
+    background: linear-gradient(#0e185f, #2fa4ff);
+    letter-spacing: 3px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 20px;
+    height: 60px;
+    width: 200px;
+    cursor: pointer;
+    line-height: 1.7;
+    display: inline-block;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.details {
+    display: none;
+    position: relative;
+    z-index: 9;
+    transition: 1s;
+}
+
+.circle {
+ 
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    z-index: 6;
+   
+    margin: auto;
+    animation-name: anim1;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes anim1 {
+    50%{width: 35px;
+height: 35px;
+    }
+    100%{   width: 70px;
+    height: 70px;
+
+    }
+    
+}
+
+p {
+    color: white;
+    max-width: 100%;
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.7;
+    transition: 1s;
+}
+
+a:hover {
+    transform: scale(1.4);
+}
